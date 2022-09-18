@@ -4,23 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/98f9dca541.js" crossorigin="anonymous"></script>
     <title>Catalogo</title>
 </head>
 
 
-<body>
+<body class="pagina">
 
     <header>
-        <h1>Catalogo</h1>
-        <ul>
-            <li><a href="./pages/porta_tarjetas.html">Porta Tarjetas</a></li>
-            <li><a href="./pages/patitos.html">Patitos</a></li>
-        </ul>
+        <h1><strong>Catalogo</strong></h1>
+        <nav>
+            <input type="checkbox" id="menu">
+            <label for="menu" class="btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+            <ul class="navegador">
+                <li><a href="./pages/patitos.html"> Patitos</a></li>
+                <li><a href="./pages/porta_tarjetas.html">Porta Tarjetas</a></li>
+            </ul>
+        </nav>
     </header>    
 
-    <body>
-    
-    </body>
+    <main class="index">
+        <h2><strong>Productos</strong></h2>
+        <div class="productos">
+            <div class="p_img">
+                <h3>Patitos</h3>
+            <img src="./img/patito.jpg" alt="Patito de decoracion">
+            </div>
+            <div class="s_img">
+                <h3>Porta Tarjetas</h3>
+                <img src="./img/porta_tarjeta.jpg" alt="Porta tarjeta generico">
+            </div>
+            <div class="t_img">
+                <h3>Smart Watch</h3>
+                <img src="./img/smart_watch.jpg" alt=" Reloj inteligente">
+            </div>
+            
+        </div>
+    </main>
 
     <footer>
 

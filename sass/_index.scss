@@ -1,0 +1,57 @@
+.index{
+    margin-inline:80px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    gap: 5px;
+    grid-template-areas: 
+    "titulo"
+    "productos";
+    h2{
+        grid-area: titulo;
+        font-size: 2rem;
+        text-align: center;
+        align-self: center;
+    }
+    .productos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "p_img"
+        "s_img"
+        "t_img";
+        .p_img{
+            grid-area: p_img;
+            h3{
+                text-align: center;
+                font-size: 1.8rem;
+                text-decoration: underline;
+                padding-block: 10px;
+            }
+            @extend .centrar;
+        }
+        .s_img{
+            grid-area: s_img;
+            h3{
+                text-align: center;
+                font-size: 1.8rem;
+                text-decoration: underline;
+                padding-block: 10px;
+            }
+            @extend .centrar;
+        }
+        .t_img{
+            grid-area: t_img;
+            h3{
+                text-align: center;
+                font-size: 1.8rem;
+                text-decoration: underline;
+                padding-block: 10px;
+            }
+            @extend .centrar;
+        }
+    }
+    background-color: $sombra;
+    border: 3px solid $borde;
+}

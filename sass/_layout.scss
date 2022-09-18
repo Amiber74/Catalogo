@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style:none;
+}
+
+.centrar{
+    justify-self: center;
+    align-self: center;
+}
+
+.pagina{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 200px;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    
+    header{
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "nav titulo titulo titulo";
+        nav{
+            grid-area: nav;
+        }
+        
+        h1{
+            grid-area: titulo;
+            text-align: start;
+            align-self: center;
+            font-size: 3.5rem;
+        }
+        
+    }
+    main{
+        grid-area: main;
+    }
+    footer{
+        grid-area: footer;
+    }
+    background-color: $base;
+}
