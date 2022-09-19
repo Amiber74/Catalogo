@@ -23,17 +23,67 @@
     header{
         grid-area: header;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 50px 1fr 1fr 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: 
         "nav titulo titulo titulo";
         nav{
             grid-area: nav;
+            height:100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* Comienzo de menu hamburguesa*/
+            #menu{
+                display: none;
+                &:checked ~ .navegador{
+                    height: 100vh;
+                    width: 150px;
+                    border-top-right-radius: 20px;
+                    border: 2px solid black;
+                    li{
+                        display: block;
+                    }
+                }
+            }
+            .btn{
+                font-size: 50px;
+                color: white;
+                margin-left: 20px;
+                cursor:pointer;
+            }
+            .navegador{
+                position: absolute;
+                left: 0px;
+                width: 10px;
+                height: 0vh;
+                top: 100px;
+                background-color: rgba(49, 49, 49, 0.466);
+                text-align: center;
+                transition: all 0.9s;
+                li{
+                    display: none;
+                    line-height: 30px;
+                    margin: 40px 0;
+                    transition: all 3s;
+                    background-color: rgba(255, 255, 255, 0.521);
+                    a{
+                        color:black;
+                        font-size: 1rem;
+                        font-weight: 600;
+                        &:hover{
+                            color: rgb(177, 0, 0);
+                            transition:all 3s;
+                        }
+                    }
+                }
+            }
         }
-        
+        /*Fin de menu hamburguesa*/
         h1{
             grid-area: titulo;
-            text-align: start;
+            text-align: center;
             align-self: center;
             font-size: 3.5rem;
         }
