@@ -40,8 +40,8 @@
   display: none;
 }
 .pagina header nav #menu:checked ~ .navegador {
-  height: 100vh;
-  width: 150px;
+  height: 400vh;
+  width: 35vw;
   border-top-right-radius: 20px;
   border: 2px solid black;
 }
@@ -141,6 +141,172 @@
   font-size: 1.8rem;
   text-decoration: underline;
   padding-block: 10px;
+}
+
+.boton, .patitos div.botones #b4, .patitos div.botones #b3, .patitos div.botones #b2, .patitos div.botones #b1 {
+  text-align: center;
+  background-color: rgb(222, 184, 135);
+  color: black;
+  padding: 10%;
+  font-size: 1.3rem;
+  border: 1px solid rgb(163, 135, 97);
+  border-radius: 50%;
+}
+
+.imagen, .patitos .imagenes #red .img_2, .patitos .imagenes #red .img_1, .patitos .imagenes #red .portada, .patitos .imagenes #yellow .img_3, .patitos .imagenes #yellow .img_2, .patitos .imagenes #yellow .img_1, .patitos .imagenes #yellow .portada, .patitos .imagenes #white .img_4, .patitos .imagenes #white .img_3, .patitos .imagenes #white .img_2, .patitos .imagenes #white .img_1, .patitos .imagenes #white .portada, .patitos .imagenes #black .img_4, .patitos .imagenes #black .img_3, .patitos .imagenes #black .img_2, .patitos .imagenes #black .img_1, .patitos .imagenes #black .portada {
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+  background-color: black;
+  border-radius: 20px;
+}
+
+.fondo, .patitos .imagenes #red, .patitos .imagenes #yellow, .patitos .imagenes #white, .patitos .imagenes #black {
+  background-color: rgb(202, 144, 69);
+  border: 2px solid rgb(153, 108, 49);
+  margin: 10px 40px;
+}
+
+.patitos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr;
+  gap: 5px;
+  grid-template-areas: "botones" "imagenes";
+}
+.patitos div.botones {
+  grid-area: botones;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "b_1 b_2 b_3 b_4";
+  padding: 10px;
+  gap: 5px;
+  align-self: center;
+}
+.patitos div.botones #b1 {
+  grid-area: b_1;
+}
+.patitos div.botones #b2 {
+  grid-area: b_2;
+}
+.patitos div.botones #b3 {
+  grid-area: b_3;
+}
+.patitos div.botones #b4 {
+  grid-area: b_4;
+}
+.patitos .imagenes {
+  grid-area: imagenes;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "b" "w" "y" "r";
+}
+.patitos .imagenes #black {
+  grid-area: b;
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  margin-inline: 10%;
+  gap: 15px;
+  grid-template-columns: 10px 1fr 1fr 10px;
+  grid-template-rows: 10px 5fr 3fr 3fr 10px;
+  grid-template-areas: ". . . ." ". portada portada ." ". img_1 img_2 ." ". img_3 img_4 ." ". . . .";
+}
+.patitos .imagenes #black .portada {
+  grid-area: portada;
+}
+.patitos .imagenes #black .img_1 {
+  grid-area: img_1;
+}
+.patitos .imagenes #black .img_1:hover {
+  z-index: 1;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+.patitos .imagenes #black .img_2 {
+  grid-area: img_2;
+}
+.patitos .imagenes #black .img_3 {
+  grid-area: img_3;
+}
+.patitos .imagenes #black .img_4 {
+  grid-area: img_4;
+}
+.patitos .imagenes #white {
+  grid-area: w;
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  margin-inline: 10%;
+  gap: 15px;
+  grid-template-columns: 10px 1fr 1fr 10px;
+  grid-template-rows: 10px 5fr 3fr 3fr 10px;
+  grid-template-areas: ". . . ." ". portada portada ." ". img_1 img_2 ." ". img_3 img_4 ." ". . . .";
+}
+.patitos .imagenes #white .portada {
+  grid-area: portada;
+}
+.patitos .imagenes #white .img_1 {
+  grid-area: img_1;
+}
+.patitos .imagenes #white .img_2 {
+  grid-area: img_2;
+}
+.patitos .imagenes #white .img_3 {
+  grid-area: img_3;
+}
+.patitos .imagenes #white .img_4 {
+  grid-area: img_4;
+}
+.patitos .imagenes #yellow {
+  grid-area: y;
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  margin-inline: 10%;
+  gap: 15px;
+  grid-template-columns: 10px 1fr 1fr 10px;
+  grid-template-rows: 10px 5fr 3fr 3fr 10px;
+  grid-template-areas: ". . . ." ". portada portada ." ". img_1 img_2 ." ". img_3 img_3 ." ". . . .";
+}
+.patitos .imagenes #yellow .portada {
+  grid-area: portada;
+}
+.patitos .imagenes #yellow .img_1 {
+  grid-area: img_1;
+}
+.patitos .imagenes #yellow .img_2 {
+  grid-area: img_2;
+}
+.patitos .imagenes #yellow .img_3 {
+  grid-area: img_3;
+  width: 50%;
+  height: 100%;
+  justify-self: center;
+}
+.patitos .imagenes #red {
+  grid-area: r;
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  margin-inline: 10%;
+  gap: 15px;
+  grid-template-columns: 10px 1fr 1fr 10px;
+  grid-template-rows: 10px 5fr 3fr 3fr 10px;
+  grid-template-areas: ". . . ." ". portada portada ." ". img_1 img_2 ." ". img_1 img_2 ." ". . . .";
+}
+.patitos .imagenes #red .portada {
+  grid-area: portada;
+}
+.patitos .imagenes #red .img_1 {
+  grid-area: img_1;
+}
+.patitos .imagenes #red .img_2 {
+  grid-area: img_2;
 }
 
 /*# sourceMappingURL=style.css.map */

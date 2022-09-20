@@ -1,0 +1,214 @@
+.boton{
+    text-align: center;
+    background-color: rgb(222, 184, 135);
+    color: black;
+    padding: 10%;
+    font-size: 1.3rem;
+    border: 1px solid rgb(163, 135, 97);
+    border-radius: 50%;
+}
+.imagen {
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+
+.fondo{
+    background-color: rgb(202, 144, 69);
+    border: 2px solid rgb(153, 108, 49);
+    margin: 10px 40px;
+}
+
+.patitos{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    gap: 5px;
+    grid-template-areas: "botones" "imagenes";
+    div.botones{
+        grid-area: botones;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "b_1 b_2 b_3 b_4";
+        padding:10px;
+        gap: 5px;
+        align-self: center;
+        #b1{
+            grid-area: b_1;
+            @extend .boton;
+        }
+        #b2{
+            grid-area: b_2;
+            @extend .boton;
+        }
+        #b3{
+            grid-area: b_3;
+            @extend .boton;
+        }
+        #b4{
+            grid-area: b_4;
+            @extend .boton;
+        }
+    }
+    .imagenes{
+        grid-area: imagenes;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "b"
+        "w"
+        "y"
+        "r";
+        #black{
+            grid-area: b;
+            display: grid;
+            justify-self: center;
+            align-self: center;
+            margin-inline: 10%;
+            gap: 15px;
+            grid-template-columns: 10px 1fr 1fr 10px;
+            grid-template-rows: 10px 5fr 3fr 3fr 10px;
+            grid-template-areas:
+            ". . . ." 
+            ". portada portada ."
+            ". img_1 img_2 ."
+            ". img_3 img_4 ."
+            ". . . .";
+            .portada{
+                grid-area: portada;
+                @extend .imagen;
+            }
+            .img_1{
+                grid-area: img_1;
+                @extend .imagen;
+                &:hover{
+                    z-index: 1;
+                    grid-column-start: 2;
+                    grid-column-end: 4;
+                    grid-row-start: 3;
+                    grid-row-end: 5;
+                }
+            }
+            .img_2{
+                grid-area: img_2;
+                @extend .imagen;
+            }
+            .img_3{
+                grid-area: img_3;
+                @extend .imagen;
+            }
+            .img_4{
+                grid-area: img_4;
+                @extend .imagen;
+            }
+            @extend .fondo;
+        }
+        #white{
+            grid-area: w;
+            display: grid;
+            justify-self: center;
+            align-self: center;
+            margin-inline: 10%;
+            gap: 15px;
+            grid-template-columns: 10px 1fr 1fr 10px;
+            grid-template-rows: 10px 5fr 3fr 3fr 10px;
+            grid-template-areas:
+            ". . . ." 
+            ". portada portada ."
+            ". img_1 img_2 ."
+            ". img_3 img_4 ."
+            ". . . .";
+            .portada{
+                grid-area: portada;
+                @extend .imagen;
+            }
+            .img_1{
+                grid-area: img_1;
+                @extend .imagen;
+            }
+            .img_2{
+                grid-area: img_2;
+                @extend .imagen;
+            }
+            .img_3{
+                grid-area: img_3;
+                @extend .imagen;
+            }
+            .img_4{
+                grid-area: img_4;
+                @extend .imagen;
+            }
+            @extend .fondo;
+        }
+        #yellow{
+            grid-area: y;
+            display: grid;
+            justify-self: center;
+            align-self: center;
+            margin-inline: 10%;
+            gap: 15px;
+            grid-template-columns: 10px 1fr 1fr 10px;
+            grid-template-rows: 10px 5fr 3fr 3fr 10px;
+            grid-template-areas:
+            ". . . ." 
+            ". portada portada ."
+            ". img_1 img_2 ."
+            ". img_3 img_3 ."
+            ". . . .";
+            .portada{
+                grid-area: portada;
+                @extend .imagen;
+            }
+            .img_1{
+                grid-area: img_1;
+                @extend .imagen;
+            }
+            .img_2{
+                grid-area: img_2;
+                @extend .imagen;
+            }
+            .img_3{
+                grid-area: img_3;
+                @extend .imagen;
+                width: 50%;
+                height: 100%;
+                justify-self: center
+            }
+            @extend .fondo;
+        }
+        #red{
+            grid-area: r;
+            display: grid;
+            justify-self: center;
+            align-self: center;
+            margin-inline: 10%;
+            gap: 15px;
+            grid-template-columns: 10px 1fr 1fr 10px;
+            grid-template-rows: 10px 5fr 3fr 3fr 10px;
+            grid-template-areas:
+            ". . . ." 
+            ". portada portada ."
+            ". img_1 img_2 ."
+            ". img_1 img_2 ."
+            ". . . .";
+            .portada{
+                grid-area: portada;
+                @extend .imagen;
+            }
+            .img_1{
+                grid-area: img_1;
+                @extend .imagen;
+            }
+            .img_2{
+                grid-area: img_2;
+                @extend .imagen;
+            }
+            @extend .fondo;
+        }
+    }
+}

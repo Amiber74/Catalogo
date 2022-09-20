@@ -38,8 +38,8 @@
             #menu{
                 display: none;
                 &:checked ~ .navegador{
-                    height: 100vh;
-                    width: 150px;
+                    height: 400vh;
+                    width: 35vw;
                     border-top-right-radius: 20px;
                     border: 2px solid black;
                     li{
