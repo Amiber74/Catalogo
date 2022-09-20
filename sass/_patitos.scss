@@ -1,24 +1,32 @@
 .boton{
     text-align: center;
-    background-color: rgb(222, 184, 135);
-    color: black;
+    background-color: $boton;
+    color: $color_letra_boton;
     padding: 10%;
     font-size: 1.3rem;
-    border: 1px solid rgb(163, 135, 97);
+    border: 1px solid $borde_boton;
     border-radius: 50%;
 }
 .imagen {
     width: 100%;
     height: 100%;
     padding: 1px;
-    background-color: black;
+    background-color: $borde_imagenes_patos;
     border-radius: 20px;
 }
 
+.animacion {
+    z-index: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    transition: all 3s;
+}
 
 .fondo{
-    background-color: rgb(202, 144, 69);
-    border: 2px solid rgb(153, 108, 49);
+    background-color: $fondo_patos;
+    border: 2px solid $borde_fondo_patos;
     margin: 10px 40px;
 }
 
@@ -87,24 +95,29 @@
                 grid-area: img_1;
                 @extend .imagen;
                 &:hover{
-                    z-index: 1;
-                    grid-column-start: 2;
-                    grid-column-end: 4;
-                    grid-row-start: 3;
-                    grid-row-end: 5;
+                    @extend .animacion;
                 }
             }
             .img_2{
                 grid-area: img_2;
                 @extend .imagen;
+                &:hover{
+                    @extend .animacion;
+                }
             }
             .img_3{
                 grid-area: img_3;
                 @extend .imagen;
+                &:hover{
+                    @extend .animacion;
+                }
             }
             .img_4{
                 grid-area: img_4;
                 @extend .imagen;
+                &:hover{
+                    @extend .animacion;
+                }
             }
             @extend .fondo;
         }
@@ -130,18 +143,30 @@
             .img_1{
                 grid-area: img_1;
                 @extend .imagen;
+                &:hover{
+                    @extend .animacion;
+                }
             }
             .img_2{
                 grid-area: img_2;
                 @extend .imagen;
+                &:hover{
+                    @extend .animacion;
+                }
             }
             .img_3{
                 grid-area: img_3;
                 @extend .imagen;
+                &:hover{
+                    @extend .animacion;
+                }
             }
             .img_4{
                 grid-area: img_4;
                 @extend .imagen;
+                &:hover{
+                    @extend .animacion;
+                }
             }
             @extend .fondo;
         }
@@ -167,17 +192,27 @@
             .img_1{
                 grid-area: img_1;
                 @extend .imagen;
+                &:hover{
+                    @extend .animacion;
+                }
             }
             .img_2{
                 grid-area: img_2;
                 @extend .imagen;
+                &:hover{
+                    @extend .animacion;
+                }
             }
             .img_3{
                 grid-area: img_3;
                 @extend .imagen;
                 width: 50%;
                 height: 100%;
-                justify-self: center
+                justify-self: center;
+                &:hover{
+                    @extend .animacion;
+                    width: 100%;
+                }
             }
             @extend .fondo;
         }
@@ -203,10 +238,16 @@
             .img_1{
                 grid-area: img_1;
                 @extend .imagen;
+                &:hover{
+                    @extend .animacion;
+                }
             }
             .img_2{
                 grid-area: img_2;
                 @extend .imagen;
+                &:hover{
+                    @extend .animacion;
+                }
             }
             @extend .fondo;
         }

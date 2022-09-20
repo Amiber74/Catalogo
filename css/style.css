@@ -1,4 +1,8 @@
-/*Paleta de colores*/
+/*PALETA DE COLORES*/
+/* Menu Hamburguesa*/
+/* Index */
+/* Botones */
+/* Patitos */
 * {
   margin: 0px;
   padding: 0px;
@@ -7,7 +11,7 @@
   list-style: none;
 }
 
-.centrar, .index .productos .t_img, .index .productos .s_img, .index .productos .p_img {
+.centrar, .index .productos .t_img, .index .productos .s_img, .index .productos .p_img, .pagina footer .info_3, .pagina footer .info_2, .pagina footer .info_1, .pagina footer h2 {
   justify-self: center;
   align-self: center;
 }
@@ -26,6 +30,8 @@
   grid-template-rows: 1fr;
   grid-template-areas: "nav titulo titulo titulo";
   /*Fin de menu hamburguesa*/
+  margin-bottom: 20px;
+  background-color: rgb(202, 144, 69);
 }
 .pagina header nav {
   grid-area: nav;
@@ -40,7 +46,7 @@
   display: none;
 }
 .pagina header nav #menu:checked ~ .navegador {
-  height: 400vh;
+  height: 116%;
   width: 35vw;
   border-top-right-radius: 20px;
   border: 2px solid black;
@@ -59,7 +65,7 @@
   left: 0px;
   width: 10px;
   height: 0vh;
-  top: 100px;
+  top: 80px;
   background-color: rgba(49, 49, 49, 0.466);
   text-align: center;
   transition: all 0.9s;
@@ -77,8 +83,8 @@
   font-weight: 600;
 }
 .pagina header nav .navegador li a:hover {
-  color: rgb(177, 0, 0);
-  transition: all 3s;
+  color: rgb(216, 12, 12);
+  transition: all 1s;
 }
 .pagina header h1 {
   grid-area: titulo;
@@ -91,6 +97,29 @@
 }
 .pagina footer {
   grid-area: footer;
+  margin-top: 20px;
+  padding-block: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px repeat(3, 1fr);
+  grid-template-areas: "titulo" "info_1" "info_2" "info_3";
+  background-color: rgb(202, 144, 69);
+}
+.pagina footer h2 {
+  grid-area: titulo;
+  font-size: 2rem;
+}
+.pagina footer .info_1 {
+  grid-area: info_1;
+  font-size: 1.3rem;
+}
+.pagina footer .info_2 {
+  grid-area: info_2;
+  font-size: 1.3rem;
+}
+.pagina footer .info_3 {
+  grid-area: info_3;
+  font-size: 1.3rem;
 }
 
 .index {
@@ -122,7 +151,7 @@
   text-align: center;
   font-size: 1.8rem;
   text-decoration: underline;
-  padding-block: 10px;
+  padding-block: 20px;
 }
 .index .productos .s_img {
   grid-area: s_img;
@@ -131,7 +160,7 @@
   text-align: center;
   font-size: 1.8rem;
   text-decoration: underline;
-  padding-block: 10px;
+  padding-block: 20px;
 }
 .index .productos .t_img {
   grid-area: t_img;
@@ -140,7 +169,7 @@
   text-align: center;
   font-size: 1.8rem;
   text-decoration: underline;
-  padding-block: 10px;
+  padding-block: 20px;
 }
 
 .boton, .patitos div.botones #b4, .patitos div.botones #b3, .patitos div.botones #b2, .patitos div.botones #b1 {
@@ -159,6 +188,15 @@
   padding: 1px;
   background-color: black;
   border-radius: 20px;
+}
+
+.animacion, .patitos .imagenes #red .img_2:hover, .patitos .imagenes #red .img_1:hover, .patitos .imagenes #yellow .img_3:hover, .patitos .imagenes #yellow .img_2:hover, .patitos .imagenes #yellow .img_1:hover, .patitos .imagenes #white .img_4:hover, .patitos .imagenes #white .img_3:hover, .patitos .imagenes #white .img_2:hover, .patitos .imagenes #white .img_1:hover, .patitos .imagenes #black .img_4:hover, .patitos .imagenes #black .img_3:hover, .patitos .imagenes #black .img_2:hover, .patitos .imagenes #black .img_1:hover {
+  z-index: 1;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  transition: all 3s;
 }
 
 .fondo, .patitos .imagenes #red, .patitos .imagenes #yellow, .patitos .imagenes #white, .patitos .imagenes #black {
@@ -220,13 +258,6 @@
 .patitos .imagenes #black .img_1 {
   grid-area: img_1;
 }
-.patitos .imagenes #black .img_1:hover {
-  z-index: 1;
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 3;
-  grid-row-end: 5;
-}
 .patitos .imagenes #black .img_2 {
   grid-area: img_2;
 }
@@ -287,6 +318,9 @@
   width: 50%;
   height: 100%;
   justify-self: center;
+}
+.patitos .imagenes #yellow .img_3:hover {
+  width: 100%;
 }
 .patitos .imagenes #red {
   grid-area: r;
