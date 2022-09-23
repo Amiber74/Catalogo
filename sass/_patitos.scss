@@ -1,3 +1,6 @@
+
+        /*Extensiones*/
+
 .boton{
     text-align: center;
     background-color: $boton;
@@ -7,6 +10,24 @@
     border: 1px solid $borde_boton;
     border-radius: 50%;
 }
+
+.codigo{
+    justify-self: center;
+    align-self:flex-end;
+    z-index: -1;
+}
+
+.animacion_codigo{
+    transition: all 0s;
+    z-index: 2;
+    background-color: black;
+    text-align: center;
+    width: 100%;
+    color: white;
+    border-end-end-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
 .imagen {
     width: 100%;
     height: 100%;
@@ -21,7 +42,6 @@
     grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 5;
-    transition: all 3s;
 }
 
 .fondo{
@@ -29,6 +49,9 @@
     border: 2px solid $borde_fondo_patos;
     margin: 10px 40px;
 }
+
+        /*Fin Extensiones*/
+
 
 .patitos{
     display: grid;
@@ -97,6 +120,14 @@
                 &:hover{
                     @extend .animacion;
                 }
+                &:hover ~ .cod_1{
+                    @extend .animacion;
+                    @extend .animacion_codigo;
+                }
+            }
+            .cod_1{
+                grid-area: img_1;
+                @extend .codigo;
             }
             .img_2{
                 grid-area: img_2;
@@ -104,6 +135,14 @@
                 &:hover{
                     @extend .animacion;
                 }
+                &:hover ~ .cod_2{
+                    @extend .animacion;
+                    @extend .animacion_codigo;
+                }
+            }
+            .cod_2{
+                grid-area: img_2;
+                @extend .codigo;
             }
             .img_3{
                 grid-area: img_3;
@@ -111,6 +150,14 @@
                 &:hover{
                     @extend .animacion;
                 }
+                &:hover ~ .cod_3{
+                    @extend .animacion;
+                    @extend .animacion_codigo;
+                }
+            }
+            .cod_3{
+                grid-area: img_3;
+                @extend .codigo;
             }
             .img_4{
                 grid-area: img_4;
@@ -118,6 +165,14 @@
                 &:hover{
                     @extend .animacion;
                 }
+                &:hover ~ .cod_4{
+                    @extend .animacion;
+                    @extend .animacion_codigo;
+                }
+            }
+            .cod_4{
+                grid-area: img_4;
+                @extend .codigo;
             }
             @extend .fondo;
         }
@@ -146,6 +201,14 @@
                 &:hover{
                     @extend .animacion;
                 }
+                &:hover ~ .cod_1{
+                    @extend .animacion;
+                    @extend .animacion_codigo;
+                }
+            }
+            .cod_1{
+                grid-area: img_1;
+                @extend .codigo;
             }
             .img_2{
                 grid-area: img_2;
@@ -153,6 +216,14 @@
                 &:hover{
                     @extend .animacion;
                 }
+                &:hover ~ .cod_2{
+                    @extend .animacion;
+                    @extend .animacion_codigo;
+                }
+            }
+            .cod_2{
+                grid-area: img_2;
+                @extend .codigo;
             }
             .img_3{
                 grid-area: img_3;
@@ -160,6 +231,14 @@
                 &:hover{
                     @extend .animacion;
                 }
+                &:hover ~ .cod_3{
+                    @extend .animacion;
+                    @extend .animacion_codigo;
+                }
+            }
+            .cod_3{
+                grid-area: img_3;
+                @extend .codigo;
             }
             .img_4{
                 grid-area: img_4;
@@ -167,6 +246,14 @@
                 &:hover{
                     @extend .animacion;
                 }
+                &:hover ~ .cod_4{
+                    @extend .animacion;
+                    @extend .animacion_codigo;
+                }
+            }
+            .cod_4{
+                grid-area: img_4;
+                @extend .codigo;
             }
             @extend .fondo;
         }
@@ -183,18 +270,25 @@
             ". . . ." 
             ". portada portada ."
             ". img_1 img_2 ."
-            ". img_3 img_3 ."
+            ". img_3 . ."
             ". . . .";
             .portada{
                 grid-area: portada;
                 @extend .imagen;
-            }
-            .img_1{
+            }.img_1{
                 grid-area: img_1;
                 @extend .imagen;
                 &:hover{
                     @extend .animacion;
                 }
+                &:hover ~ .cod_1{
+                    @extend .animacion;
+                    @extend .animacion_codigo;
+                }
+            }
+            .cod_1{
+                grid-area: img_1;
+                @extend .codigo;
             }
             .img_2{
                 grid-area: img_2;
@@ -202,17 +296,30 @@
                 &:hover{
                     @extend .animacion;
                 }
+                &:hover ~ .cod_2{
+                    @extend .animacion;
+                    @extend .animacion_codigo;
+                }
+            }
+            .cod_2{
+                grid-area: img_2;
+                @extend .codigo;
             }
             .img_3{
                 grid-area: img_3;
                 @extend .imagen;
-                width: 50%;
-                height: 100%;
-                justify-self: center;
                 &:hover{
                     @extend .animacion;
                     width: 100%;
                 }
+                &:hover ~ .cod_3{
+                    @extend .animacion;
+                    @extend .animacion_codigo;
+                }
+            }
+            .cod_3{
+                grid-area: img_3;
+                @extend .codigo;
             }
             @extend .fondo;
         }
@@ -224,7 +331,7 @@
             margin-inline: 10%;
             gap: 15px;
             grid-template-columns: 10px 1fr 1fr 10px;
-            grid-template-rows: 10px 5fr 3fr 3fr 10px;
+            grid-template-rows: 10px 40% 20% 20% 10px;
             grid-template-areas:
             ". . . ." 
             ". portada portada ."
@@ -241,6 +348,14 @@
                 &:hover{
                     @extend .animacion;
                 }
+                &:hover ~ .cod_1{
+                    @extend .animacion;
+                    @extend .animacion_codigo;
+                }
+            }
+            .cod_1{
+                grid-area: img_1;
+                @extend .codigo;
             }
             .img_2{
                 grid-area: img_2;
@@ -248,6 +363,14 @@
                 &:hover{
                     @extend .animacion;
                 }
+                &:hover ~ .cod_2{
+                    @extend .animacion;
+                    @extend .animacion_codigo;
+                }
+            }
+            .cod_2{
+                grid-area: img_2;
+                @extend .codigo;
             }
             @extend .fondo;
         }

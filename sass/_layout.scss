@@ -13,7 +13,7 @@
 
 .pagina{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 100px 1fr 200px;
     grid-template-areas:
     "header"
@@ -54,7 +54,7 @@
                 cursor:pointer;
             }
             .navegador{
-                position: absolute;
+                position: fixed;
                 left: 0px;
                 width: 10px;
                 height: 0vh;

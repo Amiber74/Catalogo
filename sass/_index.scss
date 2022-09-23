@@ -29,6 +29,11 @@
                 text-decoration: underline;
                 padding-block: 20px;
             }
+            img{
+                background-color: black;
+                padding: 2px;
+                border-radius: 10px;
+            }
             @extend .centrar;
         }
         .s_img{
@@ -39,6 +44,11 @@
                 text-decoration: underline;
                 padding-block: 20px;
             }
+            img{
+                background-color: black;
+                padding: 2px;
+                border-radius: 10px;
+            }
             @extend .centrar;
         }
         .t_img{
@@ -48,6 +58,11 @@
                 font-size: 1.8rem;
                 text-decoration: underline;
                 padding-block: 20px;
+            }
+            img{
+                background-color: black;
+                padding: 2px;
+                border-radius: 10px;
             }
             @extend .centrar;
         }

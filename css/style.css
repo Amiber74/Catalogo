@@ -18,7 +18,7 @@
 
 .pagina {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   grid-template-rows: 100px 1fr 200px;
   grid-template-areas: "header" "main" "footer";
   background-color: rgb(238, 194, 76);
@@ -61,7 +61,7 @@
   cursor: pointer;
 }
 .pagina header nav .navegador {
-  position: absolute;
+  position: fixed;
   left: 0px;
   width: 10px;
   height: 0vh;
@@ -153,6 +153,11 @@
   text-decoration: underline;
   padding-block: 20px;
 }
+.index .productos .p_img img {
+  background-color: black;
+  padding: 2px;
+  border-radius: 10px;
+}
 .index .productos .s_img {
   grid-area: s_img;
 }
@@ -161,6 +166,11 @@
   font-size: 1.8rem;
   text-decoration: underline;
   padding-block: 20px;
+}
+.index .productos .s_img img {
+  background-color: black;
+  padding: 2px;
+  border-radius: 10px;
 }
 .index .productos .t_img {
   grid-area: t_img;
@@ -171,7 +181,13 @@
   text-decoration: underline;
   padding-block: 20px;
 }
+.index .productos .t_img img {
+  background-color: black;
+  padding: 2px;
+  border-radius: 10px;
+}
 
+/*Extensiones*/
 .boton, .patitos div.botones #b4, .patitos div.botones #b3, .patitos div.botones #b2, .patitos div.botones #b1 {
   text-align: center;
   background-color: rgb(222, 184, 135);
@@ -182,6 +198,23 @@
   border-radius: 50%;
 }
 
+.codigo, .patitos .imagenes #red .cod_2, .patitos .imagenes #red .cod_1, .patitos .imagenes #yellow .cod_3, .patitos .imagenes #yellow .cod_2, .patitos .imagenes #yellow .cod_1, .patitos .imagenes #white .cod_4, .patitos .imagenes #white .cod_3, .patitos .imagenes #white .cod_2, .patitos .imagenes #white .cod_1, .patitos .imagenes #black .cod_4, .patitos .imagenes #black .cod_3, .patitos .imagenes #black .cod_2, .patitos .imagenes #black .cod_1 {
+  justify-self: center;
+  align-self: flex-end;
+  z-index: -1;
+}
+
+.animacion_codigo, .patitos .imagenes #red .img_2:hover ~ .cod_2, .patitos .imagenes #red .img_1:hover ~ .cod_1, .patitos .imagenes #yellow .img_3:hover ~ .cod_3, .patitos .imagenes #yellow .img_2:hover ~ .cod_2, .patitos .imagenes #yellow .img_1:hover ~ .cod_1, .patitos .imagenes #white .img_4:hover ~ .cod_4, .patitos .imagenes #white .img_3:hover ~ .cod_3, .patitos .imagenes #white .img_2:hover ~ .cod_2, .patitos .imagenes #white .img_1:hover ~ .cod_1, .patitos .imagenes #black .img_4:hover ~ .cod_4, .patitos .imagenes #black .img_3:hover ~ .cod_3, .patitos .imagenes #black .img_2:hover ~ .cod_2, .patitos .imagenes #black .img_1:hover ~ .cod_1 {
+  transition: all 0s;
+  z-index: 2;
+  background-color: black;
+  text-align: center;
+  width: 100%;
+  color: white;
+  border-end-end-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
 .imagen, .patitos .imagenes #red .img_2, .patitos .imagenes #red .img_1, .patitos .imagenes #red .portada, .patitos .imagenes #yellow .img_3, .patitos .imagenes #yellow .img_2, .patitos .imagenes #yellow .img_1, .patitos .imagenes #yellow .portada, .patitos .imagenes #white .img_4, .patitos .imagenes #white .img_3, .patitos .imagenes #white .img_2, .patitos .imagenes #white .img_1, .patitos .imagenes #white .portada, .patitos .imagenes #black .img_4, .patitos .imagenes #black .img_3, .patitos .imagenes #black .img_2, .patitos .imagenes #black .img_1, .patitos .imagenes #black .portada {
   width: 100%;
   height: 100%;
@@ -190,13 +223,12 @@
   border-radius: 20px;
 }
 
-.animacion, .patitos .imagenes #red .img_2:hover, .patitos .imagenes #red .img_1:hover, .patitos .imagenes #yellow .img_3:hover, .patitos .imagenes #yellow .img_2:hover, .patitos .imagenes #yellow .img_1:hover, .patitos .imagenes #white .img_4:hover, .patitos .imagenes #white .img_3:hover, .patitos .imagenes #white .img_2:hover, .patitos .imagenes #white .img_1:hover, .patitos .imagenes #black .img_4:hover, .patitos .imagenes #black .img_3:hover, .patitos .imagenes #black .img_2:hover, .patitos .imagenes #black .img_1:hover {
+.animacion, .patitos .imagenes #red .img_2:hover ~ .cod_2, .patitos .imagenes #red .img_2:hover, .patitos .imagenes #red .img_1:hover ~ .cod_1, .patitos .imagenes #red .img_1:hover, .patitos .imagenes #yellow .img_3:hover ~ .cod_3, .patitos .imagenes #yellow .img_3:hover, .patitos .imagenes #yellow .img_2:hover ~ .cod_2, .patitos .imagenes #yellow .img_2:hover, .patitos .imagenes #yellow .img_1:hover ~ .cod_1, .patitos .imagenes #yellow .img_1:hover, .patitos .imagenes #white .img_4:hover ~ .cod_4, .patitos .imagenes #white .img_4:hover, .patitos .imagenes #white .img_3:hover ~ .cod_3, .patitos .imagenes #white .img_3:hover, .patitos .imagenes #white .img_2:hover ~ .cod_2, .patitos .imagenes #white .img_2:hover, .patitos .imagenes #white .img_1:hover ~ .cod_1, .patitos .imagenes #white .img_1:hover, .patitos .imagenes #black .img_4:hover ~ .cod_4, .patitos .imagenes #black .img_4:hover, .patitos .imagenes #black .img_3:hover ~ .cod_3, .patitos .imagenes #black .img_3:hover, .patitos .imagenes #black .img_2:hover ~ .cod_2, .patitos .imagenes #black .img_2:hover, .patitos .imagenes #black .img_1:hover ~ .cod_1, .patitos .imagenes #black .img_1:hover {
   z-index: 1;
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 3;
   grid-row-end: 5;
-  transition: all 3s;
 }
 
 .fondo, .patitos .imagenes #red, .patitos .imagenes #yellow, .patitos .imagenes #white, .patitos .imagenes #black {
@@ -205,6 +237,7 @@
   margin: 10px 40px;
 }
 
+/*Fin Extensiones*/
 .patitos {
   display: grid;
   grid-template-columns: 1fr;
@@ -258,13 +291,25 @@
 .patitos .imagenes #black .img_1 {
   grid-area: img_1;
 }
+.patitos .imagenes #black .cod_1 {
+  grid-area: img_1;
+}
 .patitos .imagenes #black .img_2 {
+  grid-area: img_2;
+}
+.patitos .imagenes #black .cod_2 {
   grid-area: img_2;
 }
 .patitos .imagenes #black .img_3 {
   grid-area: img_3;
 }
+.patitos .imagenes #black .cod_3 {
+  grid-area: img_3;
+}
 .patitos .imagenes #black .img_4 {
+  grid-area: img_4;
+}
+.patitos .imagenes #black .cod_4 {
   grid-area: img_4;
 }
 .patitos .imagenes #white {
@@ -284,13 +329,25 @@
 .patitos .imagenes #white .img_1 {
   grid-area: img_1;
 }
+.patitos .imagenes #white .cod_1 {
+  grid-area: img_1;
+}
 .patitos .imagenes #white .img_2 {
+  grid-area: img_2;
+}
+.patitos .imagenes #white .cod_2 {
   grid-area: img_2;
 }
 .patitos .imagenes #white .img_3 {
   grid-area: img_3;
 }
+.patitos .imagenes #white .cod_3 {
+  grid-area: img_3;
+}
 .patitos .imagenes #white .img_4 {
+  grid-area: img_4;
+}
+.patitos .imagenes #white .cod_4 {
   grid-area: img_4;
 }
 .patitos .imagenes #yellow {
@@ -302,7 +359,7 @@
   gap: 15px;
   grid-template-columns: 10px 1fr 1fr 10px;
   grid-template-rows: 10px 5fr 3fr 3fr 10px;
-  grid-template-areas: ". . . ." ". portada portada ." ". img_1 img_2 ." ". img_3 img_3 ." ". . . .";
+  grid-template-areas: ". . . ." ". portada portada ." ". img_1 img_2 ." ". img_3 . ." ". . . .";
 }
 .patitos .imagenes #yellow .portada {
   grid-area: portada;
@@ -310,17 +367,23 @@
 .patitos .imagenes #yellow .img_1 {
   grid-area: img_1;
 }
+.patitos .imagenes #yellow .cod_1 {
+  grid-area: img_1;
+}
 .patitos .imagenes #yellow .img_2 {
+  grid-area: img_2;
+}
+.patitos .imagenes #yellow .cod_2 {
   grid-area: img_2;
 }
 .patitos .imagenes #yellow .img_3 {
   grid-area: img_3;
-  width: 50%;
-  height: 100%;
-  justify-self: center;
 }
 .patitos .imagenes #yellow .img_3:hover {
   width: 100%;
+}
+.patitos .imagenes #yellow .cod_3 {
+  grid-area: img_3;
 }
 .patitos .imagenes #red {
   grid-area: r;
@@ -330,7 +393,7 @@
   margin-inline: 10%;
   gap: 15px;
   grid-template-columns: 10px 1fr 1fr 10px;
-  grid-template-rows: 10px 5fr 3fr 3fr 10px;
+  grid-template-rows: 10px 40% 20% 20% 10px;
   grid-template-areas: ". . . ." ". portada portada ." ". img_1 img_2 ." ". img_1 img_2 ." ". . . .";
 }
 .patitos .imagenes #red .portada {
@@ -339,8 +402,88 @@
 .patitos .imagenes #red .img_1 {
   grid-area: img_1;
 }
+.patitos .imagenes #red .cod_1 {
+  grid-area: img_1;
+}
 .patitos .imagenes #red .img_2 {
   grid-area: img_2;
+}
+.patitos .imagenes #red .cod_2 {
+  grid-area: img_2;
+}
+
+@media screen and (min-width: 768px) {
+  .pagina {
+    width: 100%;
+    height: 100%;
+  }
+  /* Media del layout*/
+  header {
+    grid-template-columns: 1fr 3fr !important;
+    padding-inline: 10%;
+  }
+  header .btn {
+    display: none;
+  }
+  header h1 {
+    grid-area: nav !important;
+  }
+  header nav {
+    grid-area: titulo !important;
+  }
+  header .navegador {
+    position: relative !important;
+    height: 100px !important;
+    top: 0 !important;
+    right: 0 !important;
+    background: none !important;
+    transition: none !important;
+    text-align: right !important;
+    margin-right: 50px !important;
+  }
+  header .navegador li {
+    display: inline !important;
+    line-height: 100px !important;
+    margin: 0 20px !important;
+    transition: none !important;
+    background: none !important;
+  }
+  header .navegador li a {
+    font-size: 1.5rem !important;
+  }
+  /* Media del Index*/
+  .index {
+    padding-block: 5%;
+  }
+  .index h2 {
+    font-size: 3rem;
+  }
+  .index .productos {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "p_img s_img t_img";
+  }
+  .index .productos h3 {
+    font-size: 2rem;
+  }
+  /* Media de Patitos*/
+  .patitos div.botones {
+    padding: 5%;
+    gap: 25px;
+  }
+  .patitos div.botones #b1, .patitos div.botones #b2, .patitos div.botones #b3, .patitos div.botones #b4 {
+    padding: 20px 1px;
+    border-radius: 180%;
+  }
+  .patitos .imagenes {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "b w" "y r";
+  }
+  .patitos .imagenes #black, .patitos .imagenes #white, .patitos .imagenes #yellow, .patitos .imagenes #red {
+    width: 95%;
+    height: 95%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
