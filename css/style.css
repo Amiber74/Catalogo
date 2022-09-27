@@ -468,21 +468,76 @@
   }
   /* Media de Patitos*/
   .patitos div.botones {
-    padding: 5%;
+    padding: 8%;
     gap: 25px;
   }
   .patitos div.botones #b1, .patitos div.botones #b2, .patitos div.botones #b3, .patitos div.botones #b4 {
-    padding: 20px 1px;
-    border-radius: 180%;
+    padding: 15px 20px;
+    border-radius: 150%;
   }
   .patitos .imagenes {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "b w" "y r";
+    padding-block: 20px;
+    gap: 15px;
   }
-  .patitos .imagenes #black, .patitos .imagenes #white, .patitos .imagenes #yellow, .patitos .imagenes #red {
-    width: 95%;
-    height: 95%;
+  .patitos .imagenes #black, .patitos .imagenes #white, .patitos .imagenes #yellow {
+    height: 100%;
+    grid-template-columns: 10px 2fr 1fr 1fr 10px;
+    grid-template-rows: 10px 1fr 1fr 10px;
+    grid-template-areas: ". . . . ." ". portada img_1 img_2 ." ". portada img_3 img_4 ." ". . . . .";
+  }
+  .patitos .imagenes #black .img_1:hover, .patitos .imagenes #black .img_2:hover, .patitos .imagenes #black .img_3:hover, .patitos .imagenes #black .img_4:hover, .patitos .imagenes #white .img_1:hover, .patitos .imagenes #white .img_2:hover, .patitos .imagenes #white .img_3:hover, .patitos .imagenes #white .img_4:hover, .patitos .imagenes #yellow .img_1:hover, .patitos .imagenes #yellow .img_2:hover, .patitos .imagenes #yellow .img_3:hover, .patitos .imagenes #yellow .img_4:hover {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  .patitos .imagenes #black .img_1:hover ~ .cod_1, .patitos .imagenes #black .img_2:hover ~ .cod_1, .patitos .imagenes #black .img_3:hover ~ .cod_1, .patitos .imagenes #black .img_4:hover ~ .cod_1, .patitos .imagenes #white .img_1:hover ~ .cod_1, .patitos .imagenes #white .img_2:hover ~ .cod_1, .patitos .imagenes #white .img_3:hover ~ .cod_1, .patitos .imagenes #white .img_4:hover ~ .cod_1, .patitos .imagenes #yellow .img_1:hover ~ .cod_1, .patitos .imagenes #yellow .img_2:hover ~ .cod_1, .patitos .imagenes #yellow .img_3:hover ~ .cod_1, .patitos .imagenes #yellow .img_4:hover ~ .cod_1 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  .patitos .imagenes #black .img_1:hover ~ .cod_2, .patitos .imagenes #black .img_2:hover ~ .cod_2, .patitos .imagenes #black .img_3:hover ~ .cod_2, .patitos .imagenes #black .img_4:hover ~ .cod_2, .patitos .imagenes #white .img_1:hover ~ .cod_2, .patitos .imagenes #white .img_2:hover ~ .cod_2, .patitos .imagenes #white .img_3:hover ~ .cod_2, .patitos .imagenes #white .img_4:hover ~ .cod_2, .patitos .imagenes #yellow .img_1:hover ~ .cod_2, .patitos .imagenes #yellow .img_2:hover ~ .cod_2, .patitos .imagenes #yellow .img_3:hover ~ .cod_2, .patitos .imagenes #yellow .img_4:hover ~ .cod_2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  .patitos .imagenes #black .img_1:hover ~ .cod_3, .patitos .imagenes #black .img_2:hover ~ .cod_3, .patitos .imagenes #black .img_3:hover ~ .cod_3, .patitos .imagenes #black .img_4:hover ~ .cod_3, .patitos .imagenes #white .img_1:hover ~ .cod_3, .patitos .imagenes #white .img_2:hover ~ .cod_3, .patitos .imagenes #white .img_3:hover ~ .cod_3, .patitos .imagenes #white .img_4:hover ~ .cod_3, .patitos .imagenes #yellow .img_1:hover ~ .cod_3, .patitos .imagenes #yellow .img_2:hover ~ .cod_3, .patitos .imagenes #yellow .img_3:hover ~ .cod_3, .patitos .imagenes #yellow .img_4:hover ~ .cod_3 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  .patitos .imagenes #black .img_1:hover ~ .cod_4, .patitos .imagenes #black .img_2:hover ~ .cod_4, .patitos .imagenes #black .img_3:hover ~ .cod_4, .patitos .imagenes #black .img_4:hover ~ .cod_4, .patitos .imagenes #white .img_1:hover ~ .cod_4, .patitos .imagenes #white .img_2:hover ~ .cod_4, .patitos .imagenes #white .img_3:hover ~ .cod_4, .patitos .imagenes #white .img_4:hover ~ .cod_4, .patitos .imagenes #yellow .img_1:hover ~ .cod_4, .patitos .imagenes #yellow .img_2:hover ~ .cod_4, .patitos .imagenes #yellow .img_3:hover ~ .cod_4, .patitos .imagenes #yellow .img_4:hover ~ .cod_4 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  .patitos .imagenes #red {
+    height: 100%;
+    grid-template-columns: 10px 2fr 1fr 1fr 10px;
+    grid-template-rows: 10px 1fr 10px;
+    grid-template-areas: ". . . . ." ". portada img_1 img_2 ." ". . . . .";
+  }
+  .patitos .imagenes #red .img_1:hover, .patitos .imagenes #red .img_2:hover {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  .patitos .imagenes #red .img_1:hover ~ .cod_1, .patitos .imagenes #red .img_2:hover ~ .cod_1 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+  .patitos .imagenes #red .img_1:hover ~ .cod_2, .patitos .imagenes #red .img_2:hover ~ .cod_2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
   }
 }
 
