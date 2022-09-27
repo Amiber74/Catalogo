@@ -120,20 +120,20 @@
                     &:hover{
                         grid-column-start: 3;
                         grid-column-end: 5;
-                        grid-row-start:2 ;
-                        grid-row-end:4 ;
+                        grid-row-start:2;
+                        grid-row-end:3;
                     }
                     &:hover ~ .cod_1{
                         grid-column-start: 3;
                         grid-column-end: 5;
-                        grid-row-start:2 ;
-                        grid-row-end:4 ;
+                        grid-row-start:2;
+                        grid-row-end:3;
                     }
                     &:hover ~ .cod_2{
                         grid-column-start: 3;
                         grid-column-end: 5;
-                        grid-row-start:2 ;
-                        grid-row-end:4 ;
+                        grid-row-start:2;
+                        grid-row-end:3;
                     }
                 }
             }
